@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+	display: flex;
+}
+
+
+.logo {
+    margin: 0 auto 20px auto;
+    background: #fff;
+}
+
+.logo img {
+    width: 376px;
+    height: 200px;
+}
+
+.onepoint {
+    width: 150px;
+    position: fixed;
+    left: calc(50% - 75px);
+    bottom: 10px;
+}
+
+.point {
+    fill: #009ddf;
+}
+
+.reveal section img {
+	margin: 10px 0px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}

@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Spark</title>
+
+        <link rel="icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.css" id="theme">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.css" id="highlight-theme">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="onepoint"><svg class="logo-button__illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.72 44.43" alt="Logo onepoint"><path class="letter letter--o" d="M15.91,6.63C6.68,6.63,0,13.52,0,21.68s6.63,15,15.8,15,15.91-6.9,15.91-15.06S25.08,6.63,15.91,6.63Zm0,21.47a6.26,6.26,0,0,1-6.1-6.52c0-3.45,2.33-6.42,6-6.42a6.27,6.27,0,0,1,6.1,6.52C21.9,25.13,19.56,28.1,15.91,28.1Z"></path><path class="letter letter--n" d="M33.83,7.26H43.9v4c1.86-2.38,4.51-4.66,8.59-4.66,6.1,0,9.76,4,9.76,10.55V36H52.17V20.41c0-3.13-1.64-4.82-4-4.82s-4.24,1.69-4.24,4.82V36H33.83Z"></path><path class="letter letter--e" d="M93.1,22.32c0-8.43-4.56-15.69-14.47-15.69-8.48,0-14.48,6.68-14.48,15.05,0,8.91,6.37,15,15.38,15A15,15,0,0,0,92,30.81l-5.57-4.62a8.62,8.62,0,0,1-6.36,2.92,5.91,5.91,0,0,1-6.2-4.72H93.05C93.1,23.7,93.1,23,93.1,22.32ZM73.7,19.25c.53-3.13,2.33-5.2,5-5.2s4.61,2,5,5.2Z"></path><path class="letter letter--p" d="M114.05,6.63c-4.3,0-6.74,2.07-8.7,4.45V7.26H95.28V44.43h10.07v-12a10.79,10.79,0,0,0,8.75,4.13c6.79,0,12.67-5.72,12.67-15S120.89,6.63,114.05,6.63ZM111,28.15c-3.23,0-5.83-2.75-5.83-6.57s2.6-6.52,5.83-6.52,5.89,2.75,5.89,6.52S114.26,28.15,111,28.15Z"></path><path class="letter letter--o-2" d="M143.74,6.63c-9.23,0-15.91,6.89-15.91,15.05s6.63,15,15.8,15,15.91-6.9,15.91-15.06S152.91,6.63,143.74,6.63Zm0,21.47a6.27,6.27,0,0,1-6.1-6.52c0-3.45,2.33-6.42,6-6.42a6.27,6.27,0,0,1,6.1,6.52C149.73,25.13,147.4,28.1,143.74,28.1Z"></path><path class="letter letter--i" d="M161.87,7.26H172V36H161.87Z"></path><path class="letter letter--n-2" d="M175.45,7.26h10.07v4c1.85-2.38,4.51-4.66,8.59-4.66,6.1,0,9.75,4,9.75,10.55V36H193.79V20.41c0-3.13-1.64-4.82-4-4.82s-4.24,1.69-4.24,4.82V36H175.45Z"></path><path class="letter letter--t" d="M208.93,36V15.38h-3.39V7.26h3.39V0H219V7.26h6.68v8.12H219V36Z"></path><path class="point" d="M235.72,30.48a6.16,6.16,0,1,1-6.16-6.15A6.16,6.16,0,0,1,235.72,30.48Z"></path></svg>
+            </div>
+            <div class="slides">
+                <section>
+                    <h2>Spark</h2>
+                    <h3>Le moteur de traitement de données</h3>
+                    <div class="container">
+                      <div class="logo">
+                        <img data-src="img/spark-logo.png"/>
+                      </div>
+                    </div>
+                    <div>
+                      Rémi PICARD - Tech Lead
+                    </div>
+                  </section>
+                  <section>
+                    <section data-background="#4d7e65" data-background-transition="slide">
+                      <h1>Spark</h1>
+                      <cite>« Lightning-fast unified analytics engine »</cite>
+                      <h3 style="margin-top:20px">C'est quoi ? 😲</h3>
+                    </section>
+                    <section>
+                      <h3>Historique</h3>
+                      <ul>
+                        <li>Créé en 2009 à l'université de Californie à Berkeley</li>
+                        <li>Création de la société Databricks en 2013</li>
+                        <li>Projet Apache open source depuis 2013</li>
+                        <li>Sortie de Spark2 en 2016</li>
+                        <li>Incorporé dans les distributions Hadoop (Cloudera, MapR, Hortonworks, EMR...)</li>
+                        <li>Utilisé par tous les Cloud providers</li>
+                        <li>Sortie de Spark3 en 2020</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Moteur de calculs distribués</h3>
+                      <hr />
+                      <ul>
+                        <li>Traitements sur plusieurs machines</li>
+                        <li>Avec des milliers d'exécuteurs !</li>
+                        <li>Moteur développé en Scala</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Inspiré de MapReduce</h3>
+                      <img src="img/word_count.PNG"></img>
+                    </section>
+                    <section>
+                      <h3>Spark vs Hadoop MapReduce</h3>
+                      <ul>
+                        <li>Stockage des données intermédiaires en <strong>mémoire</strong></li>
+                        <li>10 à 100 fois plus rapide !</li>
+                        <li>Abstraction au dessus de MapReduce</li>
+                        <li>Traitements itératifs</li>
+                      </ul>
+                    </section>
+                    <section>
+                        <img src="img/principe.png"/>    
+                    </section>
+                    <section>
+                      <h3>Driver / Executor / Job / Stage / Task</h3>
+                      <img src="img/driver-executor-job-stage-task.PNG"/>    
+                    </section>
+                    <section>
+                      <h3>Job / Stage / Task</h3>
+                      <img src="img/driver-executor-job-stage-task2.PNG"/>    
+                    </section>
+                    <section>
+                      <h3>Job / Stage / Task / Shuffle</h3>
+                      <img src="img/driver-executor-job-stage-task3.PNG"/>    
+                    </section>
+                    <section>
+                      <h3>Job / Stage / Task / Shuffle</h3>
+                      <img src="img/driver-executor-job-stage-task4.PNG"/>    
+                    </section>
+                    <section>
+                      <h3>Resilient Distributed Dataset (RDD)</h3>
+                      <hr />
+                      <ul>
+                        <li>Unité de base de Spark</li>
+                        <li>API de bas niveau (transformations / actions)</li>
+                        <li>Données non structurées</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>DAG : graphe acyclique orienté</h3>
+                      <img src="img/dag.svg"/>    
+                    </section>
+                    <section>
+                      <h3>Du RDD au DataFrame</h3>
+                      <hr />
+                      <ul>
+                        <li>DataFrame : Collection immutable de données distribuées</li>
+                        <li>~ Table avec des colonnes</li>
+                        <li>Inspirées des dataframes R / pandas</li>
+                        <li>DataSet : Dataframe avec encore + de typage (API Scala/Java)</li>
+                      </ul>
+                    </section>
+                  </section>
+                  
+                  <section>
+                    <section data-background="#4d7e65" data-background-transition="slide">
+                      <h1>Spark</h1>
+                      <h3>Pour qui ?</h3>
+                    </section>
+                    <section>
+                      <h3>Ceux qui analysent / manipulent un très grand nombre de données</h3>
+                      <ul>
+                        <li>DataEngineer</li>
+                        <li>DataScientist</li>
+                        <li>Des milliers d'entreprises</li>
+                      </ul>
+                    </section>
+                    <section>
+                        <img src="img/spark-bdp_ml.JPG"/>
+                    </section>
+                    <section>
+                      <h3>Pour quelles raisons ?</h3>
+                      <ul>
+                        <li>Très grand volume de données à traiter</li>
+                        <li>Ecosystème Hadoop (DataLake)</li>
+                        <li>Techno cible pour les algos ML</li>
+                      </ul>
+                    </section>
+                  </section>
+                  <section>
+                    <section data-background="#4d7e65" data-background-transition="slide">
+                      <h1>Spark</h1>
+                      <h3>Développement d'un job</h3>
+                    </section>
+                    <section>
+                      <h3>Modules / API</h3>
+                      <img src="img/spark-stack.png"></img>
+                    </section>
+                    <section>
+                      <h3>Langages disponibles</h3>
+                      <hr />
+                      <ul>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Scala</li>
+                        <li>R</li>
+                        <li>Java</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Une multitude de formats en entrée</h3>
+                      <hr />
+                      <ul>
+                        <li>csv</li>
+                        <li>JSON</li>
+                        <li>Avro</li>
+                        <li>Parquet</li>
+                        <li>ORC</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>De nombreux connecteurs</h3>
+                      <img src="img/connectors.png"></img>
+                    </section>
+                    <section>
+                      <h3>Le code ressemble à quoi ?</h3>
+                      <p>Programmation fonctionnelle</p>
+            
+                      <pre>
+                        <code data-trim class="python">
+                          from pyspark.sql.functions import col, avg
+                          df = spark.read.option("header", True).csv("titanic.csv") \
+                                .filter(col("Age").isNotNull()) \
+                                .groupBy(col('Survived')) \
+                                .agg(avg(col("age"))) \
+                                .show()       
+                        </code>
+                      </pre>
+                    </section>
+                    <section>
+                      <h3>Terminal Intéractif (REPL)</h3>
+                      <hr />
+                      <ul>
+                        <li>pyspark (Python)</li>
+                        <li>spark-shell (Scala)</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>🧙‍♂️ Démo Code</h3> 
+                    </section>
+                  </section>
+                  <section>
+                    <section data-background="#4d7e65" data-background-transition="slide">
+                      <h1>Spark</h1>
+                      <h3>Lancement d'un job</h3>
+                    </section>
+                    <section>
+                      <h3>CLI</h3>
+                      <hr />
+                      <ul>
+                        <li>Commande spark-submit</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Suivi</h3>
+                      <hr />
+                      <ul>
+                        <li>Logs</li>
+                        <li>Interface Web Spark UI</li>
+                        <li>Grafana</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Modes de lancement</h3>
+                      <img src="img/spark-runs-everywhere.png"></img>
+                    </section>
+                    <section>
+                      <h3>Modes de lancement</h3>
+                      <hr />
+                      <ul>
+                        <li>Standalone</li>
+                        <li>Orchestrateur Yarn / Mesos</li>
+                        <li>Kubernetes</li>
+                        <li>Databricks</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Cloud</h3>
+                      <hr />
+                      <ul>
+                        <li>Databricks</li>
+                        <li>GCP DataProc (Compute)</li>
+                        <li>GCP DataFlow</li>
+                        <li>PaaS Hadoop : AWS EMR, Azure HDInsight</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Lien avec Hadoop ?</h3>
+                      <hr />
+                      <ul>
+                        <li>Pas directement lié</li>
+                        <li>Nécessite un système de fichiers distribué (HDFS, S3, DBFS, abfs...)</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h3>Outil complexe</h3>
+                      <ul>
+                        <li>Clusters complexes à configurer et à "scaler"</li>
+                        <li>Debugging compliqué et long</li>
+                        <li>Courbe d'apprentissage longue</li>
+                        <li>Gourmand en mémoire (plusieurs Go par traitement)</li>
+                      </ul>
+                    </section>
+                </section>
+                
+                <section>
+                    <section data-background="#4d7e65" data-background-transition="slide">
+                        <h1>Databricks</h3> 
+                    </section>
+                    <section>
+                      <h3>Databricks, la start-up à 28 milliards de dollars qui intéresse Microsoft, Google et Amazon</h3>
+                      <a href="https://www.lesechos.fr/tech-medias/hightech/databricks-la-start-up-a-28-milliards-de-dollars-qui-interesse-microsoft-google-et-amazon-1286731">Les Echos</a>
+                    </section>
+                    <section>
+                      <img src="img/databricks_unified_analytics.JPG"/>
+                    </section>
+                    <section>
+                      <h3>🧙‍♂️ Démo avec <a href="https://community.cloud.databricks.com/">databricks.com</a></h3> 
+                    </section>
+                </section>
+                    
+                <section>
+                    <section data-background="#4d7e65" data-background-transition="slide">
+                        <h1>Spark</h1>
+                        <h3>Aller plus loin</h3> 
+                    </section>
+                    <section>
+                      <h3>Sources / Liens</h3>
+                      <ul style="font-size: 0.8em;">
+                        <li><a href="https://youtu.be/te-GqfVFx8k">Comprendre et maîtriser la performance de vos applications Spark (R. Luta)</a></li>
+                        <li><a href="https://openclassrooms.com/fr/courses/4297166-realisez-des-calculs-distribues-sur-des-donnees-massives">Réalisez des calculs distribués sur des données massives (OpenClassrooms)</a></li>
+                        <li><a href="https://databricks.com/fr/blog/2016/07/14/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets.html">RDDs vs DataFrames and Datasets</a></li>
+                        <li><a href="https://www.twitch.tv/videos/934311177">lyondatascience - LiveCoding sur Spark MLlib (G. Facchini)</a></li>
+                        <li><a href="https://spark.apache.org/examples.html">Spark - Exemples</a> / <a href="https://spark.apache.org/docs/latest/ml-guide.html">MLLIB</a> / <a href="https://spark.apache.org/faq.html">FAQ</a></li>
+                        <li><a href="https://databricks.com/spark/about">Databricks - Spark</a></li>
+                      </ul>
+                    </section>
+            
+                    <section>
+                      <h2>Merci pour votre attention</h2>
+                      <h3>Des questions ?</h3>
+                    </section>
+                  </section>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                slideNumber: true,
+                hash: true,
+                history: true,
+                mouseWheel: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight ]
+            });
+        </script>
+    </body>
+</html>
